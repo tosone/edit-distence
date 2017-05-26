@@ -45,7 +45,26 @@ unsigned int levenshtein(const char *a, const char *b)
             bDistance = code == a[index] ? distance : distance + 1;
             distance = cache[index];
 
-            cache[index] = result = distance > result ? bDistance > result ? result + 1 : bDistance : bDistance > distance ? distance + 1 : bDistance;
+            // cache[index] = result = distance > result ? bDistance > result ? result + 1 : bDistance : bDistance > distance ? distance + 1 : bDistance;
+            if (distance > result)
+            {
+                if (bDistance > result)
+                {
+                    cache[index] = result = result + 1;
+                }
+                else
+                {
+                    cache[index] = result = bDistance;
+                }
+            }
+            else if (bDistance > distance)
+            {
+                cache[index] = result = distance + 1;
+            }
+            else
+            {
+                cache[index] = result = bDistance;
+            }
         }
     }
 
