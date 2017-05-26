@@ -29,8 +29,7 @@ assertDistance(const char *input, const char *alternative, unsigned int result) 
     assertionCount++;
 }
 
-int
-main() {
+int main(void) {
     /*
      * It should work.
      */

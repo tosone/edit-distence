@@ -35,6 +35,6 @@ run-example: example
 	./example sitting kitten
 
 clean:
-	rm -f coverage test example $(OBJ_TEST) $(OBJ_EXAMPLE) *.gc{ov,da,no}
+	rm -f coverage test example $(OBJ_TEST) $(OBJ_EXAMPLE) *.gcov *.gcda *.gcno
 
 .PHONY: clean run-coverage run-test

@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include "levenshtein.h"
 
-int
-main(int argc, char **argv) {
+int main(int argc, char **argv) {
     char *a = argv[1];
     char *b = argv[2];
 
